@@ -19,6 +19,14 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '2.1.804'
+        
+    - name: Display the path
+      run: Get-Location
+      shell: pwsh
+    
+    - name: dir
+      run: Get-ChildItem -Recurse
+      shell: pwsh
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
